@@ -1,1 +1,12 @@
-/* You can add global styles to this file, and also import other style files */
+@import "../src/assets/css/animate.css";
+@import "../src/assets/css/animated-headline.css";
+@import "../src/assets/css/app.css";
+@import "../src/assets/css/bootstrap.css";
+@import "../src/assets/css/font-awesome.css";
+@import "../src/assets/css/index.css";
+@import "../src/assets/css/jquery.fancybox.min.css";
+@import "../src/assets/css/magnific-popup.css";
+@import "../src/assets/css/responsive.css";
+@import "../src/assets/css/shortcodes.css";
+@import "../src/assets/css/style.css";
+@import "../src/assets/css/swiper-bundle.min.css";
