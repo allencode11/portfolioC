@@ -1,4 +1,4 @@
-<header id="header_main" class="header_1 js-header">
+<div id="header_main" class="header_1 js-header">
   <div class="themes-container ">
     <div class="row">
       <div class="col-md-12">
@@ -14,47 +14,31 @@
             <div class="mobile-button"><span></span></div><!-- /.mobile-button -->
             <nav id="main-nav" class="main-nav">
               <ul id="menu-primary-menu" class="menu">
-                <li class="menu-item menu-item-has-children current-menu-item">
-                  <a href="#">Home</a>
-                  <ul class="sub-menu">
-                    <li class="menu-item current-item"><a href="index.html">Home V1</a></li>
-                    <li class="menu-item"><a href="home2.html">Home V2</a></li>
-                  </ul>
+                <li class="menu-item" [ngClass]="{'current-menu-item': headerService.getItem() === 'home'}">
+                  <a (click)="toogleSelectemItem('home')" href="/home">Home</a>
                 </li>
 
-                <li class="menu-item">
-                  <a data-scroll href="#service"> Services</a>
+                <li class="menu-item" [ngClass]="{'current-menu-item': headerService.getItem() === 'services'}">
+                  <a (click)="toogleSelectemItem('services')" data-scroll href="/services">Services</a>
                 </li>
 
-                <li class="menu-item ">
-                  <a data-scroll href="#about">About</a>
+                <li class="menu-item" [ngClass]="{'current-menu-item': headerService.getItem() === 'about'}">
+                  <a (click)="toogleSelectemItem('about')" data-scroll href="/about">About</a>
                 </li>
 
-                <li class="menu-item ">
-                  <a data-scroll href="#projects"> Projects</a>
+                <li class="menu-item" [ngClass]="{'current-menu-item': headerService.getItem() === 'projects'}">
+                  <a href="/projects" (click)="toogleSelectemItem('projects')"> Projects</a>
                 </li>
 
-                <li class="menu-item menu-item-has-children">
-                  <a data-scroll href="#blog">Blog</a>
-                  <ul class="sub-menu">
-                    <li class="menu-item"><a href="blog.html">Blog</a></li>
-                    <li class="menu-item"><a href="blog-standard.html">Blog Standard</a></li>
-                    <li class="menu-item"><a href="blog-details.html">Blog Details</a></li>
-                    <li class="menu-item"><a href="blog-details-sidebar.html">Blog Details Sidebar</a></li>
-                  </ul>
+                <li class="menu-item" [ngClass]="{'current-menu-item': headerService.getItem() === 'blog'}">
+                  <a (click)="toogleSelectemItem('blog')" href="/blog">Blog</a>
                 </li>
 
-                <li class="menu-item">
-                  <a data-scroll href="#contact">Contact</a>
+                <li class="menu-item" [ngClass]="{'current-menu-item': headerService.getItem() === 'contact'}">
+                  <a (click)="toogleSelectemItem('contact')" data-scroll href="#contact">Contact</a>
                 </li>
               </ul>
-            </nav><!-- /#main-nav -->
-            <div class="flat-button-top">
-              <div class="sc-btn-top" id="site-header">
-                <a href="#" class="btn-action"><span>Contact me
-                                              </span></a>
-              </div>
-            </div>
+            </nav>
           </div>
         </div>
       </div>
@@ -68,5 +52,4 @@
       <img src="assets/images/icon/moon.png" alt="">
     </a>
   </div>
-
-</header>
+</div>

@@ -12,7 +12,7 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { SummaryComponent } from './shared/components/summary/summary.component';
 import { ContactUsComponent } from './shared/components/contact-us/contact-us.component';
 import { BrandsComponent } from './shared/components/brands/brands.component';
-import { TESTIMONIALComponent } from './shared/components/testimonial/testimonial.component';
+import { TestimonialComponent } from './shared/components/testimonial/testimonial.component';
 import { SkillsComponent } from './shared/components/skills/skills.component';
 import { SliderComponent } from './shared/components/slider/slider.component';
 import { ServicesComponent } from './shared/components/services/services.component';
@@ -21,6 +21,7 @@ import { PortfolioComponent } from './shared/components/portfolio/portfolio.comp
 import { ProcessComponent } from './shared/components/process/process.component';
 import { DevelopmentComponent } from './shared/components/development/development.component';
 import { FaqComponent } from './shared/components/faq/faq.component';
+import { BlogItemComponent } from './pages/blog-item/blog-item.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,7 @@ import { FaqComponent } from './shared/components/faq/faq.component';
     SummaryComponent,
     ContactUsComponent,
     BrandsComponent,
-    TESTIMONIALComponent,
+    TestimonialComponent,
     SkillsComponent,
     SliderComponent,
     ServicesComponent,
@@ -41,7 +42,8 @@ import { FaqComponent } from './shared/components/faq/faq.component';
     PortfolioComponent,
     ProcessComponent,
     DevelopmentComponent,
-    FaqComponent
+    FaqComponent,
+    BlogItemComponent
   ],
   imports: [
     BrowserModule,

@@ -1,14 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { HeaderService } from "../../services/header.service";
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent {
+  constructor(public headerService: HeaderService) { }
 
-  constructor() { }
-
-  ngOnInit(): void {
+  toogleSelectemItem(navElem: string) {
+    this.headerService.toogleSelectemItem(navElem);
+    console.log(this.headerService.getItem(), navElem);
   }
 
 }

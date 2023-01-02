@@ -1,48 +1,31 @@
-<section id="blog" class="tf-section2 flat-blog-post">
+<div id="blog" class="tf-section2 flat-blog-post">
   <div class="themes-container">
     <div class="row">
       <div class="col-lg-12 col-md-12 col-sm-12">
         <div class="heading-section center">
           <h5>Blog</h5>
-          <h2 class="title-section"> Latest Posts</h2>
+          <h2 class="title-section" (click)="data()"> Latest Posts</h2>
         </div>
       </div>
-      <div class="col-lg-4 col-md-4 col-sm-12">
-        <div class="wrap-post hover-img">
-          <div class="images img-style">
-            <img src="assets/images/img-box/news-1.jpg" alt="img">
-          </div>
-          <div class="content">
-            <div class="sub-title text-p">01 June , 2022</div>
-            <h4 class="text-t link-style-3"><a href="blog-details.html">different parameters like radius, orientation, opacity or color points.</a>  </h4>
-            <h6 class="meta "> By <a href="#" class="user"> Admin </a>  <a href="#" class="">0 Comments</a> </h6>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-4 col-sm-12">
-        <div class="wrap-post hover-img">
-          <div class="images img-style">
-            <img src="assets/images/img-box/news-2.jpg" alt="img">
-          </div>
-          <div class="content">
-            <div class="sub-title text-p">01 June , 2022</div>
-            <h4 class="text-t link-style-3"><a href="blog-details.html">different parameters like radius, orientation, opacity or color points.</a>  </h4>
-            <h6 class="meta "> By <a href="#" class="user"> Admin </a>  <a href="#" class="">0 Comments</a> </h6>
+        <div *ngFor="let blog of blogs" class="col-lg-4 col-md-4 col-sm-12" >
+          <div class="wrap-post hover-img" [routerLink]="['/blog/{{blog.id}}']" [state]="
+            {
+              id: blog.id,
+              title: blog.title,
+              description: blog.description,
+              content: blog.content,
+              imageSrc: blog.imageSrc
+            }">
+            <div class="images img-style">
+              <img src="{{blog.imageSrc}}" alt="img">
+            </div>
+            <div class="content">
+              <div class="sub-title text-p">{{blog.date}}</div>
+              <h4 class="text-t link-style-3"><a href="blog-details.html">{{blog.description}}</a>  </h4>
+              <h6 class="meta "> By Our company </h6>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="col-lg-4 col-md-4 col-sm-12">
-        <div class="wrap-post hover-img">
-          <div class="images img-style">
-            <img src="assets/images/img-box/news-3.jpg" alt="img">
-          </div>
-          <div class="content">
-            <div class="sub-title text-p">01 June , 2022</div>
-            <h4 class="text-t link-style-3"><a href="blog-details.html">different parameters like radius, orientation, opacity or color points.</a>  </h4>
-            <h6 class="meta "> By <a href="#" class="user"> Admin </a>  <a href="#" class="">0 Comments</a> </h6>
-          </div>
-        </div>
-      </div>
     </div>
   </div>
-</section>
+</div>
